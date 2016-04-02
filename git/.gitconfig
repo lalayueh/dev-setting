@@ -1,0 +1,35 @@
+[user]
+	name = kychen
+	email = kychen@vynca.org
+[core]
+	editor = vim
+	pager = less -x1,5
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+	log = auto
+[color "status"]
+	added = green
+	changed = red bold
+	untracked = red bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	df = diff
+	la = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	pick = cherry-pick
+	fp = format-patch
+	ll = log --graph --decorate --pretty=oneline --abbrev-commit
+	lf = log --stat --decorate --format=fuller abbrev-commit
+[http]
+	sslVerify = false
+[push]
+	default = simple
