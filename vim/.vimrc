@@ -41,6 +41,10 @@ let g:syntastic_warning_symbol = "⚠"
 " airline
 let g:airline_theme='luna'
 
+" ycm
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 set encoding=utf-8
 set fileencodings=utf-8,cp950
