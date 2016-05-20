@@ -18,6 +18,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'moll/vim-node'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'hdima/python-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,11 +41,16 @@ let g:syntastic_warning_symbol = "⚠"
 
 " airline
 let g:airline_theme='luna'
+"let g:airline_powerline_fonts = 1
 
 " ycm
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" python
+let python_highlight_all = 1
+
 
 set encoding=utf-8
 set fileencodings=utf-8,cp950
@@ -69,6 +75,7 @@ set tabpagemax=50
 set nu
 set wrap
 set linebreak
+set modifiable
 
 map      <F7>  <ESC>:FufFile<CR>
 map      <F9> <ESC>:NERDTreeToggle<CR>
@@ -82,7 +89,7 @@ let g:tagbar_left = 1
 set tags=./tags,tags,~/tags
 set t_Co=256
 colorscheme darknight256
-
+highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 " show trailing white spaces
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
