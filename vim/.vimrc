@@ -20,6 +20,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'hdima/python-syntax'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'othree/yajs.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,7 +40,7 @@ let g:syntastic_loc_list_height = 3
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 "let g:ycm_show_diagnostics_ui = 0
-"let g:syntastic_javascript_eslint_exec = 'eslint'
+"let g:syntastic_javascript_eslint_exec = ""."eslint"
 
 " airline
 let g:airline_theme='luna'

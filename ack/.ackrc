@@ -1,2 +1,2 @@
 --known-types
---type-set='all:match:.*'
+--type-set=make:match:/.*/
