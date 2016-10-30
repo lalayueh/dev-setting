@@ -1,5 +1,4 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -40,11 +39,10 @@ let g:syntastic_loc_list_height = 3
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 "let g:ycm_show_diagnostics_ui = 0
-"let g:syntastic_javascript_eslint_exec = ""."eslint"
 
 " airline
-let g:airline_theme='luna'
-"let g:airline_powerline_fonts = 1
+let g:airline_theme = 'luna'
+let g:airline_powerline_fonts = 0
 
 " ycm
 let g:ycm_add_preview_to_completeopt = 1
@@ -55,9 +53,8 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " python
 let python_highlight_all = 1
 
-
 set encoding=utf-8
-set fileencodings=utf-8,cp950
+set fileencoding=utf-8
 syntax on
 set nocompatible
 
