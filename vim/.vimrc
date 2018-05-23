@@ -99,12 +99,10 @@ match WhitespaceEOL /\s\+$/
 
 " autocmd group
 augroup ycmgroup
-    autocmd!
     autocmd FileType c,cpp,javascript nnoremap gd :YcmCompleter GoToDefinition<CR>
     autocmd FileType c,cpp,javascript nnoremap gr :YcmCompleter GoToReferences<CR>
 augroup END
 
 augroup jsonident
-    autocmd!
     autocmd FileType json setl sw=2 sts=2 et
 augroup END
