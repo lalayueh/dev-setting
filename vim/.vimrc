@@ -20,6 +20,10 @@ Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'othree/yajs.vim'
 Plugin 'vim-scripts/dbext.vim'
 
+" alias ts/jsx to javascript
+autocmd BufNewFile,BufRead *.ts setlocal filetype=javascript
+autocmd BufNewFile,BufRead *.jsx setlocal filetype=javascript
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype on
@@ -106,3 +110,4 @@ augroup END
 augroup jsonident
     autocmd FileType json setl sw=2 sts=2 et
 augroup END
+
