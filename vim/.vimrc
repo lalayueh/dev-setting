@@ -9,20 +9,22 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'othree/yajs.vim'
-Plugin 'hashivim/vim-terraform'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-apathy'
 Plugin 'w0rp/ale'
+Plugin 'hashivim/vim-terraform'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on
 
 " ale
-let g:ale_completion_enabled = 1
-let g:ale_sign_column_always = 1
+"let g:ale_completion_enabled = 1
 "let g:ale_open_list = 1
 "let g:ale_list_window_size = 3
+let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
 let g:ale_yaml_yamllint_options = '-c ~/.yamllint'
