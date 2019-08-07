@@ -21,7 +21,7 @@ call vundle#end()            " required
 filetype plugin indent on
 
 " ale
-"let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 1
 "let g:ale_open_list = 1
 "let g:ale_list_window_size = 3
 let g:ale_sign_column_always = 1
@@ -29,6 +29,8 @@ let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
 let g:ale_yaml_yamllint_options = '-c ~/.yamllint'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" let g:ale_use_global_executables = 1
+" let g:ale_typescript_tsserver_executable = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tsserver/bin/tsserver'
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  'javascript': ['eslint'],
@@ -44,7 +46,7 @@ let g:ale_linters = {
 \  'c': ['clang'],
 \  'cpp': ['clang'],
 \  'json': ['jsonlint'],
-\  'yaml': ['yamllint']
+\  'yaml': ['yamllint'],
 \}
 
 " ycm
