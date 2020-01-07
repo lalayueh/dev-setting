@@ -1,9 +1,10 @@
 [user]
 	name = lala
-	email = lalayueh@gmail.com
+	email = lala@mediot.com.tw
 [core]
 	editor = vim
 	pager = less -x1,5
+	autocrlf = input
 [color]
 	ui = auto
 	status = auto
@@ -29,7 +30,7 @@
 	fp = format-patch
 	ll = log --graph --decorate --pretty=oneline --abbrev-commit
 	lf = log --stat --decorate --format=fuller abbrev-commit
-[http]
-	sslVerify = false
 [push]
 	default = simple
+[merge]
+	ff = false

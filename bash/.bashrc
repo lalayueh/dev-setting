@@ -114,6 +114,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+export PATH="/usr/local/opt/opencv@3/bin:/usr/local/sbin:$PATH"
+#export PATH="/usr/local/opt/node@6/bin:$PATH"
+#~/.fastlane/bin/bundle
 
-export NVM_DIR="/Users/yueh/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# added by travis gem
+[ -f /Users/yueh/.travis/travis.sh ] && source /Users/yueh/.travis/travis.sh

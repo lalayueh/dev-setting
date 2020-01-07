@@ -4,13 +4,12 @@ autodetach on
 startup_message off
 defencoding utf8
 encoding utf8 utf8
-
 allpartial off
 bindkey "^[[1;5D" prev
 bindkey "^[[1;5C" next
 
 #caption always "%{= bk} %{= bY} [%n]%t @ %H %{-} %= %{= bR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
-hardstatus alwayslastline "%{gk} %{wk} %-Lw%{= Bw}%n%f %t%{-}%+Lw %= %1c:%s "
+hardstatus alwayslastline "%{gk} %{wk} %-Lw%{= Bw}%n%f %t%{-}%+Lw%= %1c:%s "
 #hardstatus string '%{gk}[%{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= w}%?%+Lw%?%? %{g}]%= %1c:%s'
 
 defscrollback 100000
@@ -19,6 +18,9 @@ defscrollback 100000
 attrcolor b ".I"
 attrcolor i "+b"
 # tell screen how to set colors. AB = background, AF=foreground
-#term screen-256color
+# term screen-256color
+# term "screen-256color"
+# term "xterm-256color"
+defbce "on"
 #termcapinfo xterm "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
 #termcapinfo xterm-color "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"

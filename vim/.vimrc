@@ -49,15 +49,6 @@ let g:ale_linters = {
 \  'yaml': ['yamllint'],
 \}
 
-" ycm
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_register_as_syntastic_checker = 0
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_show_diagnostics_ui = 0
-" let g:ycm_filetype_blacklist = { 'typescript': 1 }
-
 " airline
 "let g:airline_theme = 'luna'
 let g:airline_theme='papercolor'
@@ -69,6 +60,15 @@ let g:airline#extensions#ale#enabled = 1
 
 " terraform
 let g:terraform_align = 1
+
+" ycm
+" let g:ycm_filetype_blacklist = { 'typescript': 1 }
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_register_as_syntastic_checker = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_show_diagnostics_ui = 0
 
 syntax on
 set encoding=utf-8
