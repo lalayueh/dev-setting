@@ -9,9 +9,11 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'othree/yajs.vim'
-Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
+" Plugin 'leafgarland/typescript-vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'maxmellon/vim-jsx-pretty'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 Plugin 'tpope/vim-apathy'
 Plugin 'w0rp/ale'
 Plugin 'hashivim/vim-terraform'
@@ -22,27 +24,29 @@ filetype plugin indent on
 
 " ale
 let g:ale_completion_enabled = 1
-"let g:ale_open_list = 1
-"let g:ale_list_window_size = 3
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
 let g:ale_yaml_yamllint_options = '-c ~/.yamllint'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-" let g:ale_use_global_executables = 1
-" let g:ale_typescript_tsserver_executable = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tsserver/bin/tsserver'
+let g:ale_linters_explicit = 1
+let g:ale_fix_on_save = 1
+let g:ale_javascript_eslint_executable = 'eslint_d'
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
-\  'javascript': ['eslint'],
-\  'typescript': ['tslint'],
+\  'css': ['prettier'],
+\  'javascript': ['prettier'],
+\  'typescript': ['prettier'],
 \  'c': ['clang'],
 \  'cpp': ['clang'],
-\  'json': ['jsonlint'],
-\  'yaml': ['yamllint']
+\  'json': ['prettier'],
+\  'yaml': ['prettier']
 \}
 let g:ale_linters = {
 \  'javascript': ['eslint'],
-\  'typescript': ['tsserver', 'tslint'],
+\  'typescript': ['eslint', 'tssever'],
+\  'javascriptreact': ['eslint'],
+\  'typescriptreact': ['eslint'],
 \  'c': ['clang'],
 \  'cpp': ['clang'],
 \  'json': ['jsonlint'],
@@ -89,7 +93,7 @@ set incsearch
 set confirm
 set history=200
 set laststatus=2
-set tabpagemax=50
+set tabpagemax=200
 set number
 set wrap
 set linebreak
