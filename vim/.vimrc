@@ -23,7 +23,7 @@ call vundle#end()            " required
 filetype plugin indent on
 
 " ale
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
@@ -31,12 +31,15 @@ let g:ale_yaml_yamllint_options = '-c ~/.yamllint'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_javascript_eslint_executable = 'eslint_d'
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  'css': ['prettier'],
 \  'javascript': ['prettier'],
+\  'javascriptreact': ['prettier'],
 \  'typescript': ['prettier'],
+\  'typescriptreact': ['prettier'],
 \  'c': ['clang'],
 \  'cpp': ['clang'],
 \  'json': ['prettier'],
@@ -44,9 +47,9 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \  'javascript': ['eslint'],
-\  'typescript': ['eslint', 'tssever'],
+\  'typescript': ['tsserver', 'eslint'],
 \  'javascriptreact': ['eslint'],
-\  'typescriptreact': ['eslint'],
+\  'typescriptreact': ['tsserver', 'eslint'],
 \  'c': ['clang'],
 \  'cpp': ['clang'],
 \  'json': ['jsonlint'],
@@ -73,6 +76,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_show_diagnostics_ui = 0
+let g:ycm_auto_hover = ''
+nmap <leader>t <plug>(YCMHover)
 
 syntax on
 set encoding=utf-8
