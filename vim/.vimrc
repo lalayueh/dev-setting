@@ -23,7 +23,7 @@ call vundle#end()            " required
 filetype plugin indent on
 
 " ale
-let g:ale_completion_enabled = 0
+let g:ale_completion_enabled = 1
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
