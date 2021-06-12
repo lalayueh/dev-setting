@@ -10,7 +10,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'othree/yajs.vim'
 Plugin 'HerringtonDarkholme/yats.vim'
-" Plugin 'leafgarland/typescript-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'ycm-core/YouCompleteMe'
@@ -26,7 +25,7 @@ filetype plugin indent on
 let g:ale_completion_enabled = 1
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚡'
+let g:ale_sign_warning = '✗'
 let g:ale_yaml_yamllint_options = '-c ~/.yamllint'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_linters_explicit = 1
@@ -43,7 +42,8 @@ let g:ale_fixers = {
 \  'c': ['clang'],
 \  'cpp': ['clang'],
 \  'json': ['prettier'],
-\  'yaml': ['prettier']
+\  'yaml': ['prettier'],
+\  'terraform': ['terraform'],
 \}
 let g:ale_linters = {
 \  'javascript': ['eslint'],
@@ -54,6 +54,7 @@ let g:ale_linters = {
 \  'cpp': ['clang'],
 \  'json': ['jsonlint'],
 \  'yaml': ['yamllint'],
+\  'terraform': ['terraform-ls', 'tflint'],
 \}
 
 " airline
