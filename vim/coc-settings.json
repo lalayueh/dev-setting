@@ -1,0 +1,18 @@
+{
+  "diagnostic.displayByAle": true,
+  "suggest.snippetsSupport": false,
+  "typescript.suggest.autoImports": false,
+  "suggest.noselect": false,
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
+}
