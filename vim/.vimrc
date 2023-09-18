@@ -236,6 +236,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " general
 syntax on
+set re=0
 set encoding=utf-8
 set fileencoding=utf-8
 set nocompatible
