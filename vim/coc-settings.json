@@ -1,9 +1,11 @@
 {
   "diagnostic.displayByAle": true,
-  "suggest.snippetsSupport": false,
   "typescript.suggest.autoImports": false,
+  "typescript.suggest.completeFunctionCalls": false,
+  "suggest.enablePreselect": true,
   "suggest.noselect": false,
   "languageserver": {
+    "disableSnippetCompletion": true,
     "terraform": {
       "command": "terraform-ls",
       "args": ["serve"],
