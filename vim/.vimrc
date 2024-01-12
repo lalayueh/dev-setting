@@ -15,6 +15,7 @@ Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'tpope/vim-apathy'
 Plugin 'dense-analysis/ale'
 Plugin 'hashivim/vim-terraform'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
