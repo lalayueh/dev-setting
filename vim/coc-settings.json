@@ -4,15 +4,22 @@
   "typescript.suggest.completeFunctionCalls": false,
   "suggest.enablePreselect": true,
   "suggest.noselect": false,
+
+  "python.pythonPath": "poetry run python",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "workspace",
+  "pyright.inlayHints.functionReturnTypes": false,
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.parameterTypes": false,
+  "python.linting.enabled": false,
+  "python.formatting.provider": "none",
+
   "languageserver": {
     "disableSnippetCompletion": true,
     "terraform": {
       "command": "terraform-ls",
       "args": ["serve"],
-      "filetypes": [
-        "terraform",
-        "tf"
-      ],
+      "filetypes": ["terraform", "tf"],
       "initializationOptions": {},
       "settings": {}
     }
