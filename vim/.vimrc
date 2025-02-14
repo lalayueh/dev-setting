@@ -32,11 +32,8 @@ let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_javascript_eslint_executable = 'eslint_d'
-let g:ale_python_pylint_use_global = 0
-let g:ale_python_pylint_auto_pipenv = 1
-let g:ale_python_yapf_use_global = 0
-let g:ale_python_yapf_auto_pipenv = 1
-let g:ale_python_yapf_options = '--style=pep8'
+let g:ale_python_ruff_use_global = 0
+let g:ale_python_ruff_auto_pipenv = 1
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  'css': ['prettier'],
@@ -49,7 +46,7 @@ let g:ale_fixers = {
 \  'json': ['prettier'],
 \  'yaml': ['prettier'],
 \  'terraform': ['terraform'],
-\  'python': ['yapf', 'remove_trailing_lines', 'trim_whitespace']
+\  'python': ['ruff_format']
 \}
 let g:ale_linters = {
 \  'javascript': ['eslint'],
@@ -61,7 +58,7 @@ let g:ale_linters = {
 \  'json': ['jsonlint'],
 \  'yaml': ['yamllint'],
 \  'terraform': ['terraform-ls', 'tflint'],
-\  'python': ['pylint']
+\  'python': ['ruff']
 \}
 
 " airline
